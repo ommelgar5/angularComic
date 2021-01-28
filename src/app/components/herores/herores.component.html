@@ -1,0 +1,15 @@
+<h1 class="animatedd fadeIn fast">Héroes <small>Marvel y DC </small></h1>
+<hr>
+<div class="row row-cols-1 row-cols-md-3 g-4">
+
+  <!--
+    En el padre escuchamos el evento, con el mismo nombre definido
+    (click)=""                -> Evento click
+    (heroeSeleccionado)=""    -> Lo mismo que el evento click pero este es un evento personalizado
+    $event                    -> contiene el evento, en este caso un index desde el hijo
+
+  -->
+  <app-heroe-tarjeta (heroeSeleccionado)="verHeroe($event)" [heroe]="heroe" [index]="i" *ngFor="let heroe of heroes; let i = index"></app-heroe-tarjeta>
+
+</div>
+<!-- End cards -->
